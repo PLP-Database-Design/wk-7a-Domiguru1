@@ -1,4 +1,4 @@
--- Question 1
+
 -- Create a new table in 1NF
 CREATE TABLE ProductDetail_1NF AS
 SELECT 
@@ -20,7 +20,7 @@ FROM (
 WHERE Product IS NOT NULL;
 
 
--- OR
+
 -- Using JSON functions 
 SELECT 
     OrderID,
@@ -34,7 +34,7 @@ CROSS JOIN (
 WHERE n.n <= LENGTH(Products) - LENGTH(REPLACE(Products, ',', '')) + 1;
 
 
--- Question 2
+
 -- Create Orders table (contains order-level information)
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
